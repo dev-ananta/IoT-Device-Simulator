@@ -9,10 +9,9 @@ virtual-iot-sim/
 ├── device/
 │   ├── main.py - The Microcontroller Logic
 │   └── requirements.txt - Python dependencies
-├── web/
-│   ├── index.html - The Dashboard UI
-│   ├── styles.css - Styling
-│   └── app.js - Dashboard Logic (MQTT over WebSockets)
+├── index.html - The Dashboard UI
+├── styles.css - Styling
+├── app.js - Dashboard Logic (MQTT over WebSockets)
 ├── LICENSE - Licensing Information
 └── README.md - Instructions
 ```
@@ -45,9 +44,9 @@ pip install paho-mqtt # Use pip3 if you're using macOS.
 
 ### Launch Dashboard
 
-1. Go to the `web` folder by running this command in Terminal.
+1. Go to the `IoT-Device-Simulator` folder by running this command in Terminal.
 ```bash
-cd path/to/IoT-Device-Simulator/web
+cd path/to/IoT-Device-Simulator
 ```
 2. Double-click `index.html`.
 - It should open in your primary web-browser. I'd reccomend either using Zen or a Chromium browser.
