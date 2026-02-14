@@ -67,7 +67,7 @@ python main.py # Use python3 if you're using macOS.
 3. **Observe**: You should see logs like this one:
 - ```[TX] Sent: {'temperature': 22.0, ...}```
 
-## Utilization Guide (Reciever & Broadcaster | Global)
+## Utilization Guide (Receiver & Broadcaster | Global)
 
 ### Open Dashboard
 - The dashboard is hosted on GitHub Pages at this URL: dev-ananta.github.io/IoT-device-simulator
