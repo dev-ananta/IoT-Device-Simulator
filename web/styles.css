@@ -1,0 +1,113 @@
+/* Root */
+:root {
+    --bg: #1a1a2e;
+    --card: #16213e;
+    --primary: #0f3460;
+    --accent: #e94560;
+    --text: #ffffff;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+/* Status Indicator */
+.status-indicator {
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+/* Connected */
+.connected {
+    background-color: #2ecc71;
+    color: #000;
+}
+
+/* Disconnected */
+.disconnected {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Full Width */
+.full-width {
+    grid-column: span 3;
+}
+
+/* Value */
+.value {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* Button */
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button: Hover */
+button:hover {
+    background-color: var(--accent);
+}
+
+/* Console Log */
+.console-log {
+    margin-top: 20px;
+    background: #000;
+    padding: 10px;
+    height: 150px;
+    overflow-y: scroll;
+    font-family: monospace;
+    border-radius: 5px;
+}
+
+/* Log Entry */
+.log-entry {
+    margin: 2px;
+    border-bottom: 1px solid #333;
+    color: #0f0;
+    font-size: 0.9em;
+}
