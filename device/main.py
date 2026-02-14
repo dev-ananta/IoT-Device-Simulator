@@ -21,7 +21,7 @@ class VirtualDevice:
         self.humidity = 45.0 # Starting Humidity (%)
         self.fan_status = "OFF"
 
-    def update_physic (self):
+    def update_physics (self):
         # Simulate Environmental Physic Changes
 
         noise = random.uniform(-0.1, 0.1)
