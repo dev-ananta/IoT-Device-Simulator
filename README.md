@@ -118,9 +118,9 @@ This project aims to **simulate** the following:
 - **Commit 6**: Write `requirements.txt`.
 - **Commit 7**: Update `README.md`.
 - **Commit 8**: Test & Debug.
+- **Commit 8.1**: Change MTTQ API v1 --> v2.
+- **Commit 8.2**: Resolved Issue in update_physics (self) definition error with python(3) main.py command in Terminal.
+- **Commit 8.3**: Fixing Issues with Launching Program.
 - **Commit 9**: Publish MVP.
-- **Commit 10**: Ask for Feedback.
-- **Commit 11**: Improve Project.
-- **Commit 12**: Finalize for Shipping to "Scraps by Hack Club".
 
 #### Signed by Ananta the Developer
