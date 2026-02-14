@@ -70,7 +70,8 @@ def on_message (client, userdata, msg): # MQTT Message Handler
 # MQTT Loop
 
 # MQTT Client Setup
-client = mqtt.Client() # Create MQTT Client
+# client = mqtt.Client() # Create MQTT Client
+client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2) # Create MQTT Client (with API v2)
 client.on_connect = on_connect # Set Connection Handler
 client.on_message = on_message # Set Message Handler
 
