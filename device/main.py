@@ -6,7 +6,7 @@ import math
 import paho.mqtt.client as mqtt
 from datetime import datetime
 
-# MQTT Configuration'
+# MQTT Configuration
 BROKER_HOST = "test.mosquitto.org"
 BROKER_PORT = 1883
 DEVICE_ID = "vdev-001"

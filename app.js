@@ -9,7 +9,7 @@ let ledState = false;
 let fanState = false;
 
 // Chart Setup
-const ctx = document.getElementById('tempChart').getContext('2d');
+const ctx = document.getElementById('temp-chart').getContext('2d');
 const tempChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -33,8 +33,8 @@ function connect() {
     client = mqtt.connect(BROKER_URL);
 
     client.on('connect', () => {
-        document.getElementById('connection-staatus').innerText = "Connected";
-        document.getElementById('connection-staatus').className = "status-indicator connected";
+        document.getElementById('connection-status').innerText = "Connected";
+        document.getElementById('connection-status').className = "status-indicator connected";
 
         console.log("Connected! Subscribing...");
 
@@ -56,8 +56,8 @@ function connect() {
 
 function updateDashboard (data) { // Dashboard Updater
     // Update Text
-    document.getElementById('temp-value').innerText = data.sensors.temperature + " ˚C"; // Update Temperature
-    document.getElementById('hum-value').innerText = data.sensors.humidity + " %"; // Update Humidity
+    document.getElementById('tempe-val').innerText = data.sensors.temperature + " ˚C"; // Update Temperature
+    document.getElementById('hum-val').innerText = data.sensors.humidity + " %"; // Update Humidity
 
     // Update Status Text
     const statusText = `LED: ${data.status.led ? 'ON' : 'OFF'} | Fan: ${data.status.fan}`;
@@ -73,7 +73,7 @@ function updateDashboard (data) { // Dashboard Updater
 
 function addDataToChart (label, data) { // Chart Updater
     tempChart.data.labels.push(label);
-    tempChart.data.datasets[0].data.shift();
+    tempChart.data.datasets[0].data.push(data);
 
     // Keep Chart Clean
     if (tempChart.data.labels.length > 20) {
@@ -87,10 +87,10 @@ function addDataToChart (label, data) { // Chart Updater
 function logToConsole (message) { // Console Logger
     // Create Log Entry
     const box = document.getElementById('console-output');
-    const entry = document.creareElement('div');
+    const entry = document.createElement('div');
     // Style Log Entry
     entry.className = 'log-entry';
-    entry.innerTex = `> ${msg}`;
+    entry.innerText = `> ${message}`;
     // Add to Console
     box.prepend(entry);
 }
